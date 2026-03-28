@@ -1,24 +1,28 @@
 package model;
 
 import java.io.Serializable;
-import java.time.LocalDate;
+import java.util.Date;
 import java.util.Objects;
 
 public class Seller implements Serializable {
     private Integer id;
     private String name;
     private String email;
-    private LocalDate birthDate;
+    private Date birthDate;
     private double baseSalary;
     private Department department;
 
-    public Seller(Integer id, String name, String email, LocalDate birthDate, double baseSalary, Department department) {
+    public Seller(Integer id, String name, String email, Date birthDate, double baseSalary, Department department) {
         this.id = id;
         this.name = name;
         this.email = email;
         this.birthDate = birthDate;
         this.baseSalary = baseSalary;
         this.department = department;
+    }
+
+    public Seller() {
+
     }
 
     public Integer getId() {
@@ -39,10 +43,10 @@ public class Seller implements Serializable {
     public void setEmail(String email) {
         this.email = email;
     }
-    public LocalDate getBirthDate() {
+    public Date getBirthDate() {
         return birthDate;
     }
-    public void setBirthDate(LocalDate birthDate) {
+    public void setBirthDate(Date birthDate) {
         this.birthDate = birthDate;
     }
     public double getBaseSalary() {
