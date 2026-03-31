@@ -12,7 +12,8 @@ import java.util.Date;
 public class Program {
     public static void main(String[] args) {
         SellerDao sellerDao = DaoFactory.createSellerDao();
-        Seller seller = sellerDao.findById(8);
+        System.out.println("=== Test 1: Find Seller by ID ===");
+        Seller seller = sellerDao.findById(6);
         System.out.println(seller);
     }
 }
