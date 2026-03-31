@@ -21,5 +21,10 @@ public class Program {
         Department department = new Department(2, null);
         List<Seller> sellers = sellerDao.findByDepartment(department);
         sellers.forEach(System.out::println);
+
+        System.out.println("=== Test 3: Find All===");
+        Department dep = new Department(2, null);
+        List<Seller> vendedores = sellerDao.findAll();
+        vendedores.forEach(System.out::println);
     }
 }
