@@ -26,5 +26,10 @@ public class Program {
         Department dep = new Department(2, null);
         List<Seller> vendedores = sellerDao.findAll();
         vendedores.forEach(System.out::println);
+
+        System.out.println("=== Test 4: Seller Insert===");
+        Seller seller2 = new Seller(null, "Greg", "greg@gmail.com", new Date(), 4000, department);
+        sellerDao.insert(seller2);
+        System.out.println("INSERTED SUCCESSFULLY, New ID = " + seller2.getId());
     }
 }
